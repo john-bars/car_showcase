@@ -26,7 +26,8 @@ const SearchBar = () => {
   const handleSearch = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (manufacturer === "" || model === "") {
+    // if (manufacturer === "" || model === "") {
+    if (manufacturer === "") {
       return alert("Please fill in the search bar");
     }
 
