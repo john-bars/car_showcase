@@ -39,9 +39,10 @@ export const generateCarImageUrl = (car: CarProps, angle?: string) => {
 
   const { make, year, model } = car;
 
-  //key on url.searchParams.append('customer', 'KEY')
-  url.searchParams.append("customer", "hrjavascript-mastery");
-  // url.searchParams.append("customer", `${process.env.IMAGE_KEY}`);
+  url.searchParams.append(
+    "customer",
+    process.env.NEXT_PUBLIC_IMAGIN_API_KEY || ""
+  );
   url.searchParams.append("make", make);
   url.searchParams.append("modelFamily", model.split(" ")[0]);
   url.searchParams.append("zoomType", "fullscreen");
